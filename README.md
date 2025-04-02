@@ -6,9 +6,11 @@
 
 ## System Requirements
 ### For Developers:
-* JDK 23
-* JavaFX SDK (if using JDK which doesn't include it)
-* Scene Builder
+* Windows: Windows 10 or later (64-bit recommended)
+* Mac: macOS 10.13+ (High Sierra or later)
+* Linux: Any modern distribution with OpenJDK or Oracle JDK support
+* JavaFX SDK (e.g., from Gluon) if you are using a JDK that does not include JavaFX
+* Scene Builder from GluonHQ (supports JavaFX FXML editing).
 
 ## UML Diagrams
 
