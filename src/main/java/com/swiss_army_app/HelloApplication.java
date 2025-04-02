@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.swiss_army_app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

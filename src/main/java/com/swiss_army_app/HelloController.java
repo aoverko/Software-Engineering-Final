@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.swiss_army_app;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
