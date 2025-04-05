@@ -16,3 +16,7 @@
 ## UML Diagrams
 
 ## Mockups
+![Landing Page](github_images/Landing_page.png)
+![Verse of the Day](github_images/Verse_of_the_day.png)
+![Sports Stats](github_images/Sports_Stats.png)
+
