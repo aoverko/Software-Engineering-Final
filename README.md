@@ -5,7 +5,6 @@
 ## Installation and Uses
 
 ## System Requirements
-### For Developers:
 * Windows: Windows 10 or later (64-bit recommended)
 * Mac: macOS 10.13+ (High Sierra or later)
 * Linux: Any modern distribution with OpenJDK or Oracle JDK support
