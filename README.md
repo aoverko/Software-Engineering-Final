@@ -6,7 +6,7 @@ With each download the user gets a unique nickname, this can be as customized as
 Once the app is opened you'll have a variety of things to help the time pass quickly. 
 The first one is a tip calculator, everyone struggles with figuring out what exactly to tip and with this activity you'll have one at the tip of your fingers. 
 If you'd rather have your brain teased you can do our hangman or the Guess The Number game. Whichever one you pick it is guaranteed to work your brain and make you think. No more doom scrolling. 
-What about sports? Don’t worry we have a section for sports stats. You’ll have the top stats in your choice of sport at the click of a button without having to direct away from the page.
+What about sports? Don’t worry we have a section for sports stats. You’ll have the top stats from the newly popular F1 at the click of a button without having to direct away from the page.
 For those who like to be reminded for the day by God’s word we have a section that tells a different verse each day. It will give the scripture and where to find it. Maybe it is the right verse for what you are facing that day!
 Finally we have the setting portion, this allows you to change your nickname at any time. There are no limits for the amount of times you can change it! You can also change the color mode from dark to light and much more to make it your own. 
 
