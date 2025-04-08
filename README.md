@@ -48,3 +48,5 @@ Finally we have the setting portion, this allows you to change your nickname at 
 ![Landing Page](github_images/Landing_page.png)
 ![Verse of the Day](github_images/Verse_of_the_day.png)
 ![Sports Stats](github_images/Sports_stats.png)
+![Tip Calulator](github_images/Tip_calculator.png)
+![Guess The Number](github_images/Guess_the_Number.png)
