@@ -31,6 +31,17 @@ Finally we have the setting portion, this allows you to change your nickname at 
 2. As a user, I want to control sound settings so that I can mute the app when I’m in a quiet environment.
 3. As a user, I want to manage notification preferences so that I only receive alerts that are relevant to me.
 
+#### Tip Calculator
+1. As a user I want to see a section to input the bill, the tip in percentage, and how many ways the bill is split because I need to quickly and simply calculate each person's portion without doing the math myself. 
+2. As a user I want to see a clear breakdown of the total bill into subtotal, tip amount (total) and price per person with tip added because I want to know exactly what I am paying.
+3. As a user I want the interface to be simple and similar to that of a normal calculator because I want to calculate things quickly or when in a rush. 
+
+#### Guess The Number Game
+1. As a user I want the app to tell me if my guess was higher or lower than the randomized number because I want to know how close i am and change my guess next time accordingly.
+2. As a user I want a clearly marked reset button because when I guess correctly I want to reset the game to find another random number. 
+3. As a user I want the interface to be simple with a place to guess, an enter button, a place for a message to pop up and a reset button because I want to be able to play the game easily and without much thinking. 
+
+
 ## UML Diagrams
 
 ## Mockups
