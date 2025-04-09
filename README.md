@@ -43,7 +43,7 @@ Finally we have the setting portion, this allows you to change your nickname at 
 
 
 ## UML Diagrams
-![UML diagrams](github_images/Software_Final_Verse_UML.drawio(1).png)
+![UML diagrams](github_images/Software_Final_Verse_UML.drawio (1).png)
 ## Mockups
 ![Landing Page](github_images/Landing_page.png)
 ![Verse of the Day](github_images/daily_verse.png)
