@@ -52,4 +52,5 @@ Finally we have the setting portion, this allows you to change your nickname at 
 ![Guess The Number](github_images/number_guess.png)
 ![Dashboard](github_images/Dashboard.png)
 ![Word Game](github_images/Word_Game.png)
+![Settings](github_images/settings.png)
 
