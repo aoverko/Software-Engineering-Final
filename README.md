@@ -47,7 +47,7 @@ Finally we have the setting portion, this allows you to change your nickname at 
 ## Mockups
 ![Landing Page](github_images/Landing_page.png)
 ![Verse of the Day](github_images/daily_verse.png)
-![Sports Stats](github_images/sports_stats.png)
+![Sports Stats](github_images/Sports_stats.png)
 ![Tip Calulator](github_images/tip_calc.png)
 ![Guess The Number](github_images/number_guess.png)
 ![Dashboard](github_images/Dashboard.png)
