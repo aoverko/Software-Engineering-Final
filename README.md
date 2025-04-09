@@ -50,3 +50,6 @@ Finally we have the setting portion, this allows you to change your nickname at 
 ![Sports Stats](github_images/Sports_stats.png)
 ![Tip Calulator](github_images/Tip_calculator.png)
 ![Guess The Number](github_images/Guess_the_Number.png)
+![Dashboard](github_images/Dashboard.png)
+![Word Game](github_images/Word_Game.png)
+
