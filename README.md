@@ -46,11 +46,11 @@ Finally we have the setting portion, this allows you to change your nickname at 
 ![UML diagrams](github_images/UML_Final_Project.png)
 ## Mockups
 ![Landing Page](github_images/Landing_page.png)
+![Dashboard](github_images/Dashboard.png)
 ![Verse of the Day](github_images/daily_verse.png)
 ![Sports Stats](github_images/Sports_stats.png)
 ![Tip Calulator](github_images/tip_calc.png)
 ![Guess The Number](github_images/number_guess.png)
-![Dashboard](github_images/Dashboard.png)
 ![Word Game](github_images/Word_Game.png)
 ![Settings](github_images/settings.png)
 
