@@ -1,4 +1,6 @@
 # Software-Engineering-Final
+## Team Members
+Ariana Overko, Jewel O'Bott, Joy Sulaiman, Tala Garibay
 
 ## Swiss Army App Summary
 Tired of the same old boring waiting room magazines? Yeah, us too! Looking for something to pass the time while in our waiting room? Well, do we have the app for you!  We noticed that waiting rooms are getting more and more dull and sterile each year. There are less magazines and sometimes not great wifi. Enter our Swiss Army app where you have plenty of things to keep you busy. 
