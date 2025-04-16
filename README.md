@@ -1,5 +1,5 @@
 # Software-Engineering-Final
-Team Members
+Team Members:
 Ariana Overko, Jewel O'Bott, Joy Sulaiman, Tala Garibay
 
 ## Swiss Army App Summary
