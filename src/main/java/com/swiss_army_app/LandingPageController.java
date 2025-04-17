@@ -1,6 +1,7 @@
 package com.swiss_army_app;
 
 import com.swiss_army_app.settings.Settings;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
