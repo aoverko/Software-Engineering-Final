@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.swiss_army_app.settings.SettingsController"
             prefHeight="400.0" prefWidth="600.0">
 
+    <VBox alignment="CENTER" spacing="10" layoutX="200" layoutY="60">
+        <Label fx:id="nicknameLabel" text="Hello, User!" style="-fx-font-size: 16px;" />
+
+        <CheckBox fx:id="darkModeBox" text="Light Mode" />
+        <CheckBox fx:id="soundBox" text="Sound Effects" />
+        <CheckBox fx:id="notifBox" text="Notifications" />
+        <CheckBox fx:id="autoLoginBox" text="Auto Login" />
+        <CheckBox fx:id="tooltipBox" text="Show Tooltips" />
+
+        <Button text="Save" onAction="#handleSave" />
+    </VBox>
 </AnchorPane>
+
