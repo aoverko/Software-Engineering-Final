@@ -1,4 +1,6 @@
 # Software-Engineering-Final
+Team Members:
+Ariana Overko, Jewel O'Bott, Joy Sulaiman, Tala Garibay
 
 ## Swiss Army App Summary
 Tired of the same old boring waiting room magazines? Yeah, us too! Looking for something to pass the time while in our waiting room? Well, do we have the app for you!  We noticed that waiting rooms are getting more and more dull and sterile each year. There are less magazines and sometimes not great wifi. Enter our Swiss Army app where you have plenty of things to keep you busy. 
@@ -46,11 +48,11 @@ Finally we have the setting portion, this allows you to change your nickname at 
 ![UML diagrams](github_images/UML_Final_Project.png)
 ## Mockups
 ![Landing Page](github_images/Landing_page.png)
+![Dashboard](github_images/Dashboard.png)
 ![Verse of the Day](github_images/daily_verse.png)
 ![Sports Stats](github_images/Sports_stats.png)
 ![Tip Calulator](github_images/tip_calc.png)
 ![Guess The Number](github_images/number_guess.png)
-![Dashboard](github_images/Dashboard.png)
 ![Word Game](github_images/Word_Game.png)
 ![Settings](github_images/settings.png)
 
