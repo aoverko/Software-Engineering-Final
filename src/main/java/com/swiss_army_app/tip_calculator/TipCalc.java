@@ -1,4 +1,4 @@
-package com.swiss_army_app.other;
+package com.swiss_army_app.tip_calculator;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
