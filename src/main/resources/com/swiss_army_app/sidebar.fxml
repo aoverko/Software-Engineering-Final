@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.SidebarController">
+   <children>
+      <Rectangle fill="#c42121" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE" width="41.0" />
+      <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="5.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.PNG" />
+         </image>
+      </ImageView>
+      <ImageView id="dashIcon" fitHeight="25.0" fitWidth="24.0" layoutX="8.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@home.png" />
+         </image>
+      </ImageView>
+      <ImageView id="logoutIcon" fitHeight="22.0" fitWidth="22.0" layoutX="10.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logout.png" />
+         </image>
+      </ImageView>
+      <ImageView id="settingsIcon" fitHeight="22.0" fitWidth="22.0" layoutX="10.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@settings.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
