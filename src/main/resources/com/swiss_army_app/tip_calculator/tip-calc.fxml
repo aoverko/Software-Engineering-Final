@@ -9,14 +9,14 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.tip_calculator.TipCalcController">
-    <fx:include source="../sidebar/sidebar.fxml" />
     <children>
-        <Text fill="WHITE" layoutX="163.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tip Calculator" textAlignment="CENTER" wrappingWidth="272.591796875">
+        <fx:include source="../sidebar/sidebar.fxml" />
+        <Text fill="WHITE" layoutX="191.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tip Calculator" textAlignment="CENTER" wrappingWidth="272.591796875">
             <font>
                 <Font name="Arial Bold" size="36.0" />
             </font>
         </Text>
-        <Pane layoutX="110.0" layoutY="62.0" prefHeight="314.0" prefWidth="380.0" style="-fx-background-color: white; -fx-background-radius: 15;">
+        <Pane layoutX="137.0" layoutY="62.0" prefHeight="314.0" prefWidth="380.0" style="-fx-background-color: white; -fx-background-radius: 15;">
             <opaqueInsets>
                 <Insets />
             </opaqueInsets>

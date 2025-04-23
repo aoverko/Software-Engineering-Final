@@ -7,22 +7,21 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.word_game.WordGameController">
-    <fx:include source="../sidebar/sidebar.fxml" />
     <children>
-      <Button layoutX="274.0" layoutY="236.0" mnemonicParsing="false" text="Button" />
-      <TitledPane animated="false" layoutX="34.0" layoutY="274.0" prefHeight="91.0" prefWidth="539.0" text="Letters Guessed">
+      <fx:include source="../sidebar/sidebar.fxml" />
+      <Button layoutX="309.0" layoutY="236.0" mnemonicParsing="false" text="Button" />
+      <TitledPane animated="false" layoutX="70.0" layoutY="280.0" prefHeight="91.0" prefWidth="483.0" text="Letters Guessed">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
         </content>
       </TitledPane>
-      <Line endX="249.09999084472656" endY="188.29998779296875" startX="186.492919921875" startY="188.2999725341797" />
-      <Line endX="249.09999084472656" endY="188.29998779296875" layoutX="75.0" startX="186.492919921875" startY="188.2999725341797" />
-      <Line endX="249.09999084472656" endY="188.29998779296875" layoutX="154.0" startX="186.492919921875" startY="188.2999725341797" />
-      <Line endX="249.09999084472656" endY="188.29998779296875" layoutX="232.0" startX="186.492919921875" startY="188.2999725341797" />
-      <Line endX="249.09999084472656" endY="188.29998779296875" layoutX="304.0" layoutY="-1.0" startX="186.492919921875" startY="188.2999725341797" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcba56" height="107.0" layoutX="34.0" layoutY="135.0" stroke="#915506" strokeType="INSIDE" width="116.0" />
+      <Line endX="249.09999084472656" endY="188.29998779296875" layoutX="10.0" startX="186.492919921875" startY="188.2999725341797" />
+      <Line endX="249.09999084472656" endY="188.29998779296875" layoutX="85.0" startX="186.492919921875" startY="188.2999725341797" />
+      <Line endX="249.09999084472656" endY="188.29998779296875" layoutX="165.0" startX="186.492919921875" startY="188.2999725341797" />
+      <Line endX="249.09999084472656" endY="188.29998779296875" layoutX="241.0" startX="186.492919921875" startY="188.2999725341797" />
+      <Line endX="249.09999084472656" endY="188.29998779296875" layoutX="322.0" startX="186.492919921875" startY="188.2999725341797" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcba56" height="107.0" layoutX="70.0" layoutY="135.0" stroke="#915506" strokeType="INSIDE" width="116.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
    </children>
 </AnchorPane>

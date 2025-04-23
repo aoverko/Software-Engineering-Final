@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.swiss_army_app.settings.SettingsController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.settings.SettingsController">
     <fx:include source="../sidebar/sidebar.fxml" />
 
-    <VBox spacing="15.0" alignment="CENTER" layoutX="150.0" layoutY="50.0">
-        <Label fx:id="nicknameLabel" text="Hello!" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <VBox alignment="CENTER" layoutX="216.0" layoutY="61.0" spacing="15.0">
+        <Label fx:id="nicknameLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Hello!" />
 
-        <CheckBox fx:id="darkModeBox" text="Enable Dark Mode"/>
-        <CheckBox fx:id="soundBox" text="Enable Sound"/>
-        <CheckBox fx:id="notifBox" text="Enable Notifications"/>
-        <CheckBox fx:id="autoLoginBox" text="Enable Auto-Login"/>
-        <CheckBox fx:id="tooltipBox" text="Show Tooltips"/>
+        <CheckBox fx:id="darkModeBox" text="Enable Dark Mode" />
+        <CheckBox fx:id="soundBox" text="Enable Sound" />
+        <CheckBox fx:id="notifBox" text="Enable Notifications" />
+        <CheckBox fx:id="autoLoginBox" text="Enable Auto-Login" />
+        <CheckBox fx:id="tooltipBox" text="Show Tooltips" />
 
-        <Button text="Save Settings" onAction="#handleSave" prefWidth="200.0"/>
+        <Button onAction="#handleSave" prefWidth="200.0" text="Save Settings" />
     </VBox>
 
 </AnchorPane>
