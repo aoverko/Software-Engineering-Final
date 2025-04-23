@@ -22,7 +22,7 @@ public class LandingPageController {
                 com.swiss_army_app.settings.Settings.getInstance().setNickname(nickname);
             }
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/swiss_army_app/settings/settings.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/swiss_army_app/dashboard/dashboard.fxml"));
             Scene dashboardScene = new Scene(loader.load());
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

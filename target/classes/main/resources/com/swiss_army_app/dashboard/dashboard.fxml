@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
 <!--Checking pushes work-->
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.swiss_army_app.dashboard.DashboardController"
-            prefHeight="400.0" prefWidth="600.0">
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.dashboard.DashboardController">
     <fx:include source="../sidebar/sidebar.fxml" />
+   <Button id="toTipCalc" layoutX="138.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#loadTipCalc" text="Tip Calculator" />
+   <Button id="toNumberGuess" layoutX="270.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#loadNumGuess" text="Guess the Number" />
+   <Button id="toCatBox" layoutX="422.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#loadCat" text="Cat in a Box" />
+   <Button id="toVerse" layoutX="138.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#loadVerse" text="Verse of the Day" />
+   <Button id="toSports" layoutX="270.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#loadSports" text="Sports Stats" />
 </AnchorPane>

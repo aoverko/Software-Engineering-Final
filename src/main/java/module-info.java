@@ -10,9 +10,7 @@ module com.swiss_army_app {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-//    opens com.swiss_army_app to javafx.fxml;
-//    opens com.swiss_army_app.settings to javafx.fxml;
-//    exports com.swiss_army_app;
+
     opens com.swiss_army_app.sidebar to javafx.fxml;
     opens com.swiss_army_app.landing_page to javafx.fxml;
     opens com.swiss_army_app.settings to javafx.fxml;
