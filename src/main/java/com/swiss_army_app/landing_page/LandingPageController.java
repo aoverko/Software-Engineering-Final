@@ -22,12 +22,11 @@ public class LandingPageController {
                 com.swiss_army_app.settings.Settings.getInstance().setNickname(nickname);
             }
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/swiss_army_app/settings/Settings.fxml"));
-            Scene settingsScene = new Scene(loader.load());
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/swiss_army_app/dashboard/dashboard.fxml"));
+            Scene dashboardScene = new Scene(loader.load());
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(settingsScene);
-            stage.setTitle("Settings");
+            stage.setScene(dashboardScene);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace(); // or use a proper logger
