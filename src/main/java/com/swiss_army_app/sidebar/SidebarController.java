@@ -1,4 +1,4 @@
-package com.swiss_army_app;
+package com.swiss_army_app.sidebar;
 
 import com.swiss_army_app.dashboard.DashboardController;
 import javafx.fxml.FXML;

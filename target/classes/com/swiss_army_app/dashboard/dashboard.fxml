@@ -10,5 +10,5 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.swiss_army_app.dashboard.DashboardController"
             prefHeight="400.0" prefWidth="600.0">
-
+    <fx:include source="../sidebar/sidebar.fxml" />
 </AnchorPane>

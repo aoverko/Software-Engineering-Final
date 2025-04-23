@@ -8,6 +8,7 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.swiss_army_app.settings.SettingsController"
             prefHeight="400.0" prefWidth="600.0">
+    <fx:include source="../sidebar/sidebar.fxml" />
 
     <VBox spacing="15.0" alignment="CENTER" layoutX="150.0" layoutY="50.0">
         <Label fx:id="nicknameLabel" text="Hello!" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>

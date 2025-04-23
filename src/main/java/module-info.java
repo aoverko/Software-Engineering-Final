@@ -13,7 +13,7 @@ module com.swiss_army_app {
 //    opens com.swiss_army_app to javafx.fxml;
 //    opens com.swiss_army_app.settings to javafx.fxml;
 //    exports com.swiss_army_app;
-
+    opens com.swiss_army_app.sidebar to javafx.fxml;
     opens com.swiss_army_app.landing_page to javafx.fxml;
     opens com.swiss_army_app.settings to javafx.fxml;
     opens com.swiss_army_app.dashboard to javafx.fxml;
@@ -23,6 +23,7 @@ module com.swiss_army_app {
     opens com.swiss_army_app.tip_calculator to javafx.fxml;
     opens com.swiss_army_app.word_game to javafx.fxml;
 
+    exports com.swiss_army_app.sidebar;
     exports com.swiss_army_app.landing_page;
     exports com.swiss_army_app.settings;
     exports com.swiss_army_app.dashboard;
