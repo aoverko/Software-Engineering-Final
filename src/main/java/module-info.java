@@ -9,6 +9,7 @@ module com.swiss_army_app {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires annotations;
 
 
     opens com.swiss_army_app.sidebar to javafx.fxml;

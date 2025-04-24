@@ -101,6 +101,17 @@
   </dependencies>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*</include>
+          <include>**/*.txt</include>
+          <include>**/*.png</include>
+        </includes>
+      </resource>
+    </resources>
+
     <pluginManagement>
     <plugins>
       <!-- Compiler plugin -->
