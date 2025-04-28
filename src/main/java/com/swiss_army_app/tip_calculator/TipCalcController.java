@@ -14,4 +14,10 @@ public class TipCalcController{
     @FXML
     private TextField splitBillField;
 
+    @FXML
+    private Button enterButton;
+
+    @FXML
+    private void handleEnterButtonClick(){System.out.println("Enter button clicked!");};
+
 }
