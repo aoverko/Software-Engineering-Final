@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.daily_verse.DailyVerseController">
-    <fx:include source="../sidebar/sidebar.fxml" />
-   <ImageView id="verseImg" fx:id="verseImg" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
-   <Label id="verseLabel" fx:id="verseLabel" layoutX="112.0" layoutY="69.0" prefHeight="262.0" prefWidth="419.0" textFill="WHITE" wrapText="true">
-      <font>
-         <Font name="Arial" size="18.0" />
-      </font>
-   </Label>
+<ImageView id="verseImg" fx:id="verseImg" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+<fx:include source="../sidebar/sidebar.fxml" />
+<Label id="verseLabel" fx:id="verseLabel" alignment="CENTER" layoutX="131.0" layoutY="83.0" prefHeight="235.0" prefWidth="370.0" textFill="WHITE" wrapText="true">
+   <font>
+      <Font name="Arial Bold" size="18.0" />
+   </font>
+   <effect>
+      <DropShadow height="5.0" radius="2.0" width="5.0" />
+   </effect>
+</Label>
 </AnchorPane>
