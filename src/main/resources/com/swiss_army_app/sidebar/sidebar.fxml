@@ -1,35 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
-
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.sidebar.SidebarController">
    <children>
-      <Rectangle fill="#c42121" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE"
-                 AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
-                 AnchorPane.leftAnchor="0.0" width="41.0" />
-      <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="5.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@logo.PNG" />
-         </image>
-      </ImageView>
-      <ImageView id="dashIcon" fitHeight="25.0" fitWidth="24.0" layoutX="8.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#loadDash">
-         <image>
-            <Image url="@home.png" />
-         </image>
-      </ImageView>
-      <ImageView id="logoutIcon" fitHeight="22.0" fitWidth="22.0" layoutX="10.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#loadLogout">
-         <image>
-            <Image url="@logout.png" />
-         </image>
-      </ImageView>
-      <ImageView id="settingsIcon" fitHeight="22.0" fitWidth="22.0" layoutX="10.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#loadSettings">
-         <image>
-            <Image url="@settings.png" />
-         </image>
-      </ImageView>
+      <VBox alignment="CENTER" maxWidth="41.0" prefHeight="400.0" prefWidth="41.0" style="-fx-background-color: #c42121;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.PNG" />
+               </image>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ImageView>
+            <ImageView id="dashIcon" fitHeight="25.0" fitWidth="24.0" onMouseClicked="#loadDash" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@home.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView id="logoutIcon" fitHeight="22.0" fitWidth="22.0" onMouseClicked="#loadLogout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logout.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="4.0" top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView id="settingsIcon" fitHeight="22.0" fitWidth="22.0" nodeOrientation="INHERIT" onMouseClicked="#loadSettings" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@settings.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="175.0" />
+               </VBox.margin>
+            </ImageView>
+         </children></VBox>
    </children>
 </AnchorPane>

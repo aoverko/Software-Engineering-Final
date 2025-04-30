@@ -1,0 +1,35 @@
+
+.anchor-pane {
+    -fx-background-color: black;
+}
+
+
+.white-card {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+/* Buttons */
+.red-button {
+    -fx-background-color: #B22222;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+}
+
+.gray-button {
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+}
+
+.green-button {
+    -fx-background-color: darkgreen;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+}

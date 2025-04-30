@@ -10,6 +10,9 @@ module com.swiss_army_app {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires annotations;
+    requires java.net.http;
+    requires com.fasterxml.jackson.databind;
+    requires com.fasterxml.jackson.core;
 
 
     opens com.swiss_army_app.sidebar to javafx.fxml;

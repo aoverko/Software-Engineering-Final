@@ -1,13 +1,13 @@
 package com.swiss_army_app.landing_page;
 
-import com.swiss_army_app.settings.Settings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.Node;
+import com.swiss_army_app.settings.Settings; // make sure this is correct too
 
 public class LandingPageController {
 
@@ -15,21 +15,18 @@ public class LandingPageController {
     private TextField nicknameField;
 
     @FXML
-    public void handleGetStarted(ActionEvent event) {
-        try {
-            String nickname = nicknameField.getText();
-            if (Settings.getInstance().isAutoLogin()) {
-                com.swiss_army_app.settings.Settings.getInstance().setNickname(nickname);
-            }
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/swiss_army_app/dashboard/dashboard.fxml"));
-            Scene dashboardScene = new Scene(loader.load());
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(dashboardScene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace(); // or use a proper logger
+    public void handleWelcome(ActionEvent event) throws Exception {
+        // If auto-login is enabled, save the nickname
+        if (Settings.getInstance().isAutoLogin()) {
+            Settings.getInstance().setNickname(nicknameField.getText());
         }
+
+        // Load Settings Page
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/swiss_army_app/dashboard/dashboard.fxml"));
+        Scene dashScene = new Scene(loader.load());
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(dashScene);
+        stage.setTitle("Settings");
+        stage.show();
     }
 }

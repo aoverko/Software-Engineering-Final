@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.swiss_army_app.landing_page.LandingPageController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane stylesheets="@../style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.swiss_army_app.landing_page.LandingPageController">
 
-    <VBox spacing="20.0" alignment="CENTER" layoutX="150.0" layoutY="100.0">
-        <TextField fx:id="nicknameField" promptText="Enter your nickname" prefWidth="300.0"/>
-        <Button text="Get Started" onAction="#handleGetStarted" prefWidth="150.0"/>
+    <!-- Background Image -->
+    <ImageView fitHeight="600" fitWidth="800" opacity="0.62">
+        <image>
+            <Image url="@train_bg.png" />
+        </image>
+    </ImageView>
+
+    <!-- White Card Centered -->
+    <VBox alignment="CENTER" prefHeight="250" prefWidth="300" styleClass="white-card" AnchorPane.bottomAnchor="175" AnchorPane.leftAnchor="250" AnchorPane.rightAnchor="250" AnchorPane.topAnchor="175">
+        <Label contentDisplay="CENTER" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Highlander Industries" />
+        <TextField fx:id="nicknameField" promptText="Enter nickname" onAction="#handleWelcome"/>
+        <Button onAction="#handleWelcome" styleClass="red-button" text="Welcome" />
     </VBox>
 
 </AnchorPane>

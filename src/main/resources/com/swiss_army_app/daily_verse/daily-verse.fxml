@@ -4,11 +4,11 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.daily_verse.DailyVerseController">
 <ImageView id="verseImg" fx:id="verseImg" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-<fx:include source="../sidebar/sidebar.fxml" />
 <Label id="verseLabel" fx:id="verseLabel" alignment="CENTER" layoutX="131.0" layoutY="83.0" prefHeight="235.0" prefWidth="370.0" textFill="WHITE" wrapText="true">
    <font>
       <Font name="Arial Bold" size="18.0" />
@@ -17,4 +17,9 @@
       <DropShadow height="5.0" radius="2.0" width="5.0" />
    </effect>
 </Label>
+   <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+      <fx:include source="../sidebar/sidebar.fxml" />
+      </children>
+   </HBox>
 </AnchorPane>

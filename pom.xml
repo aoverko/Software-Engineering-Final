@@ -98,6 +98,28 @@
       <artifactId>fxgl</artifactId>
       <version>17.3</version>
     </dependency>
+
+    <!-- Jackson Databind (core JSON <-> Java mapping) -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.13.2.2</version> <!-- Latest as of 2025 -->
+    </dependency>
+
+    <!-- Jackson Core (parsing engine) -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.13.2</version>
+    </dependency>
+
+    <!-- Jackson Annotations (for @JsonProperty etc.) -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>2.13.2</version>
+    </dependency>
+
   </dependencies>
 
   <build>
