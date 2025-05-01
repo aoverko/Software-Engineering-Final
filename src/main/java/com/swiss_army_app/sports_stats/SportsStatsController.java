@@ -2,7 +2,10 @@ package com.swiss_army_app.sports_stats;
 
 import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
@@ -23,6 +26,7 @@ public class SportsStatsController {
 
     @FXML
     public BarChart <String, Number> teamRanks;
+
 
     ApiConnection api = new ApiConnection();
 
@@ -58,9 +62,9 @@ public class SportsStatsController {
 
             if (races != null && !races.isEmpty()) {
                 Race nextRace = races.getFirst();
-                nextEvent.setText("Next Event: " + nextRace.getDate());
                 eventType.setText(nextRace.getCompetition().getName());
                 circuitName.setText(nextRace.getCircuit().getName());
+                eventStatus.setText("Status: " + nextRace.getStatus());
             }
 
         } catch (IOException | InterruptedException e) {
@@ -80,12 +84,18 @@ public class SportsStatsController {
 
                 data.nodeProperty().addListener((obs, oldNode, newNode) -> {
                     if (newNode != null) {
+                        // assign point values to each bar
                         javafx.scene.control.Label label = new javafx.scene.control.Label(String.valueOf(team.getPoints()));
-                        label.setStyle("-fx-text-fill: white; -fx-font-weight: bold;");
+                        // some styling for when elements are added
+                        label.setStyle("-fx-text-fill: #ffffff; -fx-font-weight: bold;");
                         newNode.setStyle("-fx-bar-fill: #c42121;");
+                        teamRanks.getXAxis().lookupAll(".axis-tick-label").forEach(axisLabel ->
+                                axisLabel.setStyle("-fx-text-fill: white; -fx-font-weight: bold;"));
 
-                        // position the label
-                        ((javafx.scene.layout.StackPane) newNode).getChildren().add(label);
+                        // add the elements to the pane in the chart
+                        StackPane stackPane = (StackPane) newNode;
+                        label.setTranslateY(-10);
+                        stackPane.getChildren().add(label);
                     }
                 });
 

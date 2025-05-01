@@ -46,6 +46,19 @@
     -fx-stroke: transparent;
 }
 
+.chart-bar {
+    -fx-bar-fill: #c42121;
+}
+
+.chart-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.axis-label {
+    -fx-text-fill: white;
+}
+
 .axis {
     -fx-border-color: transparent;
     -fx-tick-mark-length: 0;
@@ -53,10 +66,10 @@
 }
 
 /* Keep labels visible */
-.axis .tick-label {
-    -fx-fill: white;
+.axis-tick-label {
+    -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-font-size: 12px;
+    -fx-font-size: 14px;
 }
 
 /* Hide axis lines and ticks*/

@@ -23,12 +23,12 @@
                   <children>
                      <VBox prefHeight="112.0" prefWidth="140.0">
                         <children>
-                           <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Top Driver">
+                           <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Top Driver" wrappingWidth="193.6861572265625">
                               <font>
                                  <Font name="Arial Bold" size="20.0" />
                               </font>
                            </Text>
-                           <Text fx:id="driverName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="105.00006103515625">
+                           <Text fx:id="driverName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="191.666748046875">
                               <font>
                                  <Font name="Arial Bold" size="18.0" />
                               </font>
@@ -36,12 +36,12 @@
                                  <Insets top="5.0" />
                               </VBox.margin>
                            </Text>
-                           <Text fx:id="driverTeam" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="105.00003051757812">
+                           <Text fx:id="driverTeam" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="193.33340454101562">
                               <font>
                                  <Font name="Arial Bold" size="18.0" />
                               </font>
                            </Text>
-                           <Text fx:id="driverPoints" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="105.33331298828125">
+                           <Text fx:id="driverPoints" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="193.0">
                               <font>
                                  <Font name="Arial Bold" size="18.0" />
                               </font>
@@ -60,7 +60,7 @@
                   <children>
                      <VBox prefHeight="112.0" prefWidth="199.0">
                         <children>
-                           <Text fx:id="nextEvent" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="118.33331298828125">
+                           <Text fx:id="nextEvent" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcoming Event" wrappingWidth="198.66668701171875">
                               <font>
                                  <Font name="Arial Bold" size="20.0" />
                               </font>
@@ -68,17 +68,17 @@
                                  <Insets bottom="5.0" />
                               </VBox.margin>
                            </Text>
-                           <Text fx:id="eventType" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.3333740234375">
+                           <Text fx:id="eventType" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="199.00006103515625">
                               <font>
                                  <Font name="Arial Bold" size="18.0" />
                               </font>
                            </Text>
-                           <Text fx:id="circuitName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="126.6666259765625">
+                           <Text fx:id="circuitName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="200.0">
                               <font>
                                  <Font name="Arial Bold" size="18.0" />
                               </font>
                            </Text>
-                           <Text fx:id="eventStatus" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="131.6666259765625">
+                           <Text fx:id="eventStatus" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="200.99993896484375">
                               <font>
                                  <Font name="Arial Bold" size="18.0" />
                               </font>
@@ -92,18 +92,18 @@
                <Insets bottom="10.0" top="30.0" />
             </VBox.margin>
          </HBox>
+         <BarChart fx:id="teamRanks" alternativeRowFillVisible="false" animated="false" barGap="0.0" categoryGap="0.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" legendSide="TOP" legendVisible="false" prefHeight="232.0" prefWidth="601.0" style="-fx-background-radius: 10;" stylesheets="@../style.css" title="Team Rankings by Points" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+           <xAxis>
+             <CategoryAxis prefHeight="77.0" prefWidth="440.0" side="BOTTOM" />
+           </xAxis>
+           <yAxis>
+             <NumberAxis side="LEFT" />
+           </yAxis>
+            <padding>
+               <Insets left="65.0" right="50.0" />
+            </padding>
+         </BarChart>
       </children>
    </VBox>
-   <BarChart fx:id="teamRanks" alternativeRowFillVisible="false" barGap="0.0" categoryGap="0.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" layoutX="-36.0" layoutY="173.0" legendSide="LEFT" prefHeight="213.0" prefWidth="587.0" style="-fx-background-radius: 10;" stylesheets="@../style.css" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
-     <xAxis>
-       <CategoryAxis side="BOTTOM" />
-     </xAxis>
-     <yAxis>
-       <NumberAxis side="LEFT" />
-     </yAxis>
-      <padding>
-         <Insets left="100.0" />
-      </padding>
-   </BarChart>
     <fx:include source="../sidebar/sidebar.fxml" />
 </AnchorPane>
