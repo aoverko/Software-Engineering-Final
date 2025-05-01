@@ -5,9 +5,96 @@
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.sports_stats.SportsStatsController">
-   <BarChart fx:id="teamRank" alternativeRowFillVisible="false" barGap="0.0" categoryGap="0.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" layoutX="-36.0" layoutY="159.0" legendSide="LEFT" prefHeight="227.0" prefWidth="587.0" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+   <VBox prefHeight="400.0" prefWidth="601.0" style="-fx-background-color: black;">
+      <children>
+         <HBox prefHeight="86.0" prefWidth="601.0">
+            <children>
+               <TextFlow fx:id="topDriver" prefHeight="132.0" prefWidth="211.0" style="-fx-background-color: #585555; -fx-background-radius: 10;">
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+                  <children>
+                     <VBox prefHeight="112.0" prefWidth="140.0">
+                        <children>
+                           <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Top Driver">
+                              <font>
+                                 <Font name="Arial Bold" size="20.0" />
+                              </font>
+                           </Text>
+                           <Text fx:id="driverName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="105.00006103515625">
+                              <font>
+                                 <Font name="Arial Bold" size="18.0" />
+                              </font>
+                              <VBox.margin>
+                                 <Insets top="5.0" />
+                              </VBox.margin>
+                           </Text>
+                           <Text fx:id="driverTeam" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="105.00003051757812">
+                              <font>
+                                 <Font name="Arial Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Text fx:id="driverPoints" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="105.33331298828125">
+                              <font>
+                                 <Font name="Arial Bold" size="18.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </VBox>
+                  </children>
+                  <HBox.margin>
+                     <Insets left="100.0" right="15.0" />
+                  </HBox.margin>
+               </TextFlow>
+               <TextFlow fx:id="nextRace" prefHeight="132.0" prefWidth="217.0" style="-fx-background-color: #585555; -fx-background-radius: 10;">
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+                  <children>
+                     <VBox prefHeight="112.0" prefWidth="199.0">
+                        <children>
+                           <Text fx:id="nextEvent" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="118.33331298828125">
+                              <font>
+                                 <Font name="Arial Bold" size="20.0" />
+                              </font>
+                              <VBox.margin>
+                                 <Insets bottom="5.0" />
+                              </VBox.margin>
+                           </Text>
+                           <Text fx:id="eventType" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.3333740234375">
+                              <font>
+                                 <Font name="Arial Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Text fx:id="circuitName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="126.6666259765625">
+                              <font>
+                                 <Font name="Arial Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Text fx:id="eventStatus" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="131.6666259765625">
+                              <font>
+                                 <Font name="Arial Bold" size="18.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </VBox>
+                  </children>
+               </TextFlow>
+            </children>
+            <VBox.margin>
+               <Insets bottom="10.0" top="30.0" />
+            </VBox.margin>
+         </HBox>
+      </children>
+   </VBox>
+   <BarChart fx:id="teamRanks" alternativeRowFillVisible="false" barGap="0.0" categoryGap="0.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" layoutX="-36.0" layoutY="173.0" legendSide="LEFT" prefHeight="213.0" prefWidth="587.0" style="-fx-background-radius: 10;" stylesheets="@../style.css" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
      <xAxis>
        <CategoryAxis side="BOTTOM" />
      </xAxis>

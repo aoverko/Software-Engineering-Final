@@ -9,6 +9,7 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.other.OtherController">
+    <fx:include source="../sidebar/sidebar.fxml" />
     <Pane layoutX="109.0" layoutY="11.0" prefHeight="378.0" prefWidth="382.0" style="-fx-background-color: white; -fx-background-radius: 15;">
         <Text fill="#bf0101" layoutX="-5.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guess The Number" textAlignment="CENTER" wrappingWidth="392.537109375">
             <font>

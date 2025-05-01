@@ -19,7 +19,7 @@ public class DailyVerseController {
 
     // fun fact: this is automatically called by javafx on load! :D
     @FXML
-    public void initialize () {
+    public void initialize() {
         loadImage();
         loadVerse();
     }

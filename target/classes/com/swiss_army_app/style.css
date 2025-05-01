@@ -33,3 +33,37 @@
     -fx-font-weight: bold;
     -fx-padding: 10 20;
 }
+
+.chart-plot-background {
+    -fx-background-color:  #585555;
+    -fx-background-radius: 10;
+}
+
+.chart-vertical-grid-lines,
+.chart-horizontal-grid-lines,
+.chart-alternative-row-fill,
+.chart-alternative-column-fill {
+    -fx-stroke: transparent;
+}
+
+.axis {
+    -fx-border-color: transparent;
+    -fx-tick-mark-length: 0;
+    -fx-minor-tick-visible: false;
+}
+
+/* Keep labels visible */
+.axis .tick-label {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+/* Hide axis lines and ticks*/
+.axis .axis-line,
+.axis .tick-mark {
+    -fx-stroke: transparent;
+}
+
+
+

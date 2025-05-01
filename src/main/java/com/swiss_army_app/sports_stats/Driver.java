@@ -1,14 +1,25 @@
 package com.swiss_army_app.sports_stats;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 // template class for the current top driver
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Driver {
+    @JsonProperty("driver")
+    private DriverInfo driverInfo;
+    @JsonProperty("team")
+    private DriverTeam driverTeam;
     private int position;
     private int points;
     private int wins;
 
     // getters and setters
+    public DriverInfo getDriverInfo() {return driverInfo;}
+    public void setDriverInfo(DriverInfo driverInfo) {this.driverInfo = driverInfo;}
+
+    public DriverTeam getDriverTeam() {return driverTeam;}
+    public void setDriverTeam(DriverTeam driverTeam) {this.driverTeam = driverTeam;}
+
     public int getPosition() {return position;}
     public void setPosition(int position) {this.position = position;}
 

@@ -26,7 +26,7 @@ public class LandingPageController {
         Scene dashScene = new Scene(loader.load());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(dashScene);
-        stage.setTitle("Settings");
+        stage.setTitle("Highlander Industries");
         stage.show();
     }
 }

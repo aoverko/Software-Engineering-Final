@@ -1,15 +1,19 @@
 package com.swiss_army_app.sports_stats;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class DriverResponse {
-    private List<Driver> driverResponse;
+    @JsonProperty("response")
+    private List<Driver> drivers;
 
-    public List<Driver> getResponse() {
-        return driverResponse;
+    public List<Driver> getDrivers() {
+        return drivers;
     }
-
-    public void setResponse(List<Driver> response) {
-        this.driverResponse = response;
+    public void setDrivers(List<Driver> drivers) {
+        this.drivers = drivers;
     }
 }
