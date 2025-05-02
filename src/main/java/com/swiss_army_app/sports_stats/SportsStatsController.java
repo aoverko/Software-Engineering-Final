@@ -5,6 +5,8 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -17,15 +19,16 @@ public class SportsStatsController {
     @FXML public Text driverName;
     @FXML public Text driverTeam;
     @FXML public Text driverPoints;
+    @FXML public ImageView driverImg;
 
     @FXML public TextFlow nextRace;
     @FXML public Text nextEvent;
     @FXML public Text eventType;
     @FXML public Text circuitName;
     @FXML public Text eventStatus;
+    @FXML public ImageView circuitImg;
 
-    @FXML
-    public BarChart <String, Number> teamRanks;
+    @FXML public BarChart <String, Number> teamRanks;
 
 
     ApiConnection api = new ApiConnection();
@@ -48,6 +51,10 @@ public class SportsStatsController {
                 driverName.setText(topDriver.getDriverInfo().getName());
                 driverTeam.setText(topDriver.getDriverTeam().getName());
                 driverPoints.setText(topDriver.getPoints() + " Points");
+
+                String url = topDriver.getDriverInfo().getImage();
+                Image image = new Image(url);
+                driverImg.setImage(image);
             }
 
         } catch (IOException | InterruptedException e) {
@@ -65,6 +72,10 @@ public class SportsStatsController {
                 eventType.setText(nextRace.getCompetition().getName());
                 circuitName.setText(nextRace.getCircuit().getName());
                 eventStatus.setText("Status: " + nextRace.getStatus());
+
+                String url = nextRace.getCircuit().getImage();
+                Image image = new Image(url);
+                circuitImg.setImage(image);
             }
 
         } catch (IOException | InterruptedException e) {

@@ -13,7 +13,7 @@ public class LandingPageApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/swiss_army_app/landing_page/landing-page.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600); //
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 600); //
         stage.setTitle("Highlander Industries");
         stage.setScene(scene);
         stage.show();

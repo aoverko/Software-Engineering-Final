@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 
 public class OtherController {
@@ -13,7 +15,8 @@ public class OtherController {
     @FXML
     private TextField userGuessField;
 
-    @FXML TextField resultsMessageField;
+    @FXML
+    private Text resultsMessageField;
 
     @FXML
     private Button enterButton;
