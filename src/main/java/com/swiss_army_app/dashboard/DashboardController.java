@@ -2,6 +2,7 @@ package com.swiss_army_app.dashboard;
 
 import com.swiss_army_app.settings.ApplySettings;
 import com.swiss_army_app.settings.Settings;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -21,6 +22,7 @@ public class DashboardController {
     @FXML
     public void initialize() {
         ApplySettings.applyDarkMode(rootPane);
+        Platform.runLater(() -> ApplySettings.addClicks(rootPane));
         welcomeLabel.setText("Welcome, " + Settings.getInstance().getNickname());
     }
 

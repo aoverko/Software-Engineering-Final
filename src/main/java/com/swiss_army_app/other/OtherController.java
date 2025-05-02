@@ -1,6 +1,7 @@
 package com.swiss_army_app.other;
 
 import com.swiss_army_app.settings.ApplySettings;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -21,6 +22,7 @@ public class OtherController {
     public void initialize() {
         startNewGame();
         ApplySettings.applyDarkMode(rootPane);
+        Platform.runLater(() -> ApplySettings.addClicks(rootPane));
     }
 
     private int randomNumber;
@@ -31,7 +33,7 @@ public class OtherController {
 
     @FXML
     private void handleEnterButtonClick(ActionEvent event){
-        System.out.println("Button clicked!"); // Check if the button click is registered
+        //System.out.println("Button clicked!"); // Check if the button click is registered
 
         try {
             String userGuessText = userGuessField.getText();

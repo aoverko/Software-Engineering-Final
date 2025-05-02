@@ -1,6 +1,7 @@
 package com.swiss_army_app.tip_calculator;
 
 import com.swiss_army_app.settings.ApplySettings;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.fxml.FXML;
@@ -23,6 +24,7 @@ public class TipCalcController{
     @FXML
     public void initialize() {
         ApplySettings.applyDarkMode(rootPane);
+        Platform.runLater(() -> ApplySettings.addClicks(rootPane));
     }
 
     @FXML

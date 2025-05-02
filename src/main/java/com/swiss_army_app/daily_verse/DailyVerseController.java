@@ -30,6 +30,7 @@ public class DailyVerseController {
         loadImage();
         loadVerse();
         ApplySettings.applyDarkMode(rootPane);
+        Platform.runLater(() -> ApplySettings.addClicks(rootPane));
     }
 
     @FXML

@@ -14,6 +14,7 @@ module com.swiss_army_app {
     requires com.fasterxml.jackson.databind;
     requires com.fasterxml.jackson.core;
     requires java.sql;
+    requires javafx.media;
 
 
     opens com.swiss_army_app.sidebar to javafx.fxml;

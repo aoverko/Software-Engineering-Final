@@ -1,10 +1,12 @@
 package com.swiss_army_app.landing_page;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 import com.swiss_army_app.settings.Settings;
@@ -13,11 +15,13 @@ import com.swiss_army_app.settings.ApplySettings;
 public class LandingPageController {
     @FXML
     private TextField nicknameField;
-
+    @FXML
+    private AnchorPane rootPane;
 
     @FXML
     public void initialize() {
         ApplySettings.autoLogin(nicknameField);
+        Platform.runLater(() -> ApplySettings.addClicks(rootPane));
     }
 
     @FXML

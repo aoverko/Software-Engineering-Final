@@ -1,6 +1,7 @@
 package com.swiss_army_app.sports_stats;
 
 import com.swiss_army_app.settings.ApplySettings;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
@@ -43,6 +44,7 @@ public class SportsStatsController {
         initializeNextRace();
         initializeBarChart();
         ApplySettings.applyDarkMode(rootPane);
+        Platform.runLater(() -> ApplySettings.addClicks(rootPane));
     }
 
 

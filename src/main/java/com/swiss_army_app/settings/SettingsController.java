@@ -1,5 +1,6 @@
 package com.swiss_army_app.settings;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,10 +9,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.control.Tooltip;
 import com.swiss_army_app.landing_page.LandingPageController;
+
+import java.util.Objects;
 
 public class SettingsController {
 
@@ -23,6 +27,7 @@ public class SettingsController {
     @FXML private AnchorPane rootPane;
     @FXML private Button saveButton;
     @FXML private Button backButton;
+    @FXML private Label settingsNotification;
 
     @FXML
     public void initialize() {
@@ -32,6 +37,7 @@ public class SettingsController {
         notifBox.setSelected(s.isNotificationsOn());
         autoLoginBox.setSelected(s.isAutoLogin());
         tooltipBox.setSelected(s.isShowTooltips());
+        Platform.runLater(() -> ApplySettings.addClicks(rootPane));
 
         applySettings();
     }
@@ -78,11 +84,18 @@ public class SettingsController {
             saveButton.setTooltip(null);
             backButton.setTooltip(null);
         }
+
+        //handle notification
+        if (s.isNotificationsOn()) {
+            settingsNotification.setText("Settings Updated Successfully!");
+        } else {
+            settingsNotification.setText("");
+        }
     }
 
     @FXML
     public void handleBack(ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/swiss_army_app/dashboard/dashboard.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/swiss_army_app/dashboard/dashboard.fxml")));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root, 1000, 600));
         stage.setTitle("Highlander Industries");
