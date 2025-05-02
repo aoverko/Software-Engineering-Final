@@ -1,20 +1,30 @@
 package com.swiss_army_app.dashboard;
 
-import com.swiss_army_app.dashboard.DashboardController;
+import com.swiss_army_app.settings.ApplySettings;
+import com.swiss_army_app.settings.Settings;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class DashboardController {
-    @FXML
-    private ImageView toTipCalc;
+    @FXML private AnchorPane rootPane;
+    @FXML private Label welcomeLabel;
 
+    @FXML
+    public void initialize() {
+        ApplySettings.applyDarkMode(rootPane);
+        welcomeLabel.setText("Welcome, " + Settings.getInstance().getNickname());
+    }
+
+    @FXML private ImageView toTipCalc;
     @FXML
     public void loadTipCalc(MouseEvent event) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(DashboardController.class.getResource("/com/swiss_army_app/tip_calculator/tip-calc.fxml"));
@@ -25,9 +35,7 @@ public class DashboardController {
         stage.show();
     }
 
-    @FXML
-    private ImageView toNumberGuess;
-
+    @FXML private ImageView toNumberGuess;
     @FXML
     public void loadNumGuess(MouseEvent event) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(DashboardController.class.getResource("/com/swiss_army_app/other/other.fxml"));
@@ -38,9 +46,7 @@ public class DashboardController {
         stage.show();
     }
 
-    @FXML
-    private ImageView toCatBox;
-
+    @FXML private ImageView toCatBox;
     @FXML
     public void loadCat(MouseEvent event) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(DashboardController.class.getResource("/com/swiss_army_app/word_game/word-game.fxml"));
@@ -51,9 +57,7 @@ public class DashboardController {
         stage.show();
     }
 
-    @FXML
-    private ImageView toVerse;
-
+    @FXML private ImageView toVerse;
     @FXML
     public void loadVerse(MouseEvent event) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(DashboardController.class.getResource("/com/swiss_army_app/daily_verse/daily-verse.fxml"));
@@ -64,9 +68,7 @@ public class DashboardController {
         stage.show();
     }
 
-    @FXML
-    private ImageView toSports;
-
+    @FXML private ImageView toSports;
     @FXML
     public void loadSports(MouseEvent event) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(DashboardController.class.getResource("/com/swiss_army_app/sports_stats/sports-stats.fxml"));

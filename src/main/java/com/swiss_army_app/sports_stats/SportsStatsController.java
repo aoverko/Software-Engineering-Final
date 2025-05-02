@@ -1,5 +1,6 @@
 package com.swiss_army_app.sports_stats;
 
+import com.swiss_army_app.settings.ApplySettings;
 import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
@@ -7,6 +8,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -15,6 +17,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class SportsStatsController {
+    @FXML private AnchorPane rootPane;
+
     @FXML public TextFlow topDriver;
     @FXML public Text driverName;
     @FXML public Text driverTeam;
@@ -38,6 +42,7 @@ public class SportsStatsController {
         initializeTopDriver();
         initializeNextRace();
         initializeBarChart();
+        ApplySettings.applyDarkMode(rootPane);
     }
 
 

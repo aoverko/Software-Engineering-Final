@@ -12,8 +12,8 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.sports_stats.SportsStatsController">
-   <VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: black;">
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.sports_stats.SportsStatsController">
+   <VBox prefHeight="600.0" prefWidth="1000.0">
       <children>
          <HBox prefHeight="99.0" prefWidth="1024.0">
             <children>
@@ -83,6 +83,9 @@
                                           <font>
                                              <Font name="Arial Bold" size="20.0" />
                                           </font>
+                                          <VBox.margin>
+                                             <Insets top="5.0" />
+                                          </VBox.margin>
                                        </Text>
                                        <Text fx:id="circuitName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="266.66668701171875">
                                           <font>
@@ -127,5 +130,9 @@
          </BarChart>
       </children>
    </VBox>
-    <fx:include source="../sidebar/sidebar.fxml" />
+   <HBox prefHeight="600.0" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+          <fx:include source="../sidebar/sidebar.fxml" />
+      </children>
+   </HBox>
 </AnchorPane>

@@ -84,8 +84,8 @@ public class SettingsController {
     public void handleBack(ActionEvent event) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/com/swiss_army_app/dashboard/dashboard.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root, 800, 600));
-        // stage.setTitle("Highlander Industries");
+        stage.setScene(new Scene(root, 1000, 600));
+        stage.setTitle("Highlander Industries");
         stage.show();
     }
 }

@@ -1,7 +1,7 @@
 package com.swiss_army_app.settings;
 
 public class Settings {
-    private static Settings instance = new Settings();
+    private static final Settings instance = new Settings();
 
     private boolean darkMode;
     private boolean soundEnabled;

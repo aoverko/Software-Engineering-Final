@@ -1,29 +1,29 @@
 package com.swiss_army_app.other;
 
+import com.swiss_army_app.settings.ApplySettings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
 
 public class OtherController {
-
-    private int randomNumber; // <-- class-level variable
-
-    @FXML
-    private TextField userGuessField;
-
-    @FXML
-    private Text resultsMessageField;
+    @FXML private AnchorPane rootPane;
+    @FXML private TextField userGuessField;
+    @FXML private Text resultsMessageField;
+    @FXML private Button enterButton;
+    @FXML private Button resetButton;
 
     @FXML
-    private Button enterButton;
+    public void initialize() {
+        startNewGame();
+        ApplySettings.applyDarkMode(rootPane);
+    }
 
-    @FXML
-    private Button resetButton;
-
+    private int randomNumber;
     private void startNewGame() {
         randomNumber = (int) (Math.random() * 100) + 1;
     }

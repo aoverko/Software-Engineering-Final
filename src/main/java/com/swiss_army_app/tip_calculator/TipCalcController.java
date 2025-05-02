@@ -1,34 +1,30 @@
 package com.swiss_army_app.tip_calculator;
+
+import com.swiss_army_app.settings.ApplySettings;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
-
-
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 
 public class TipCalcController{
 
+    @FXML private AnchorPane rootPane;
+    @FXML private TextField totalBillField;
+
+    @FXML private TextField totalTipField;
+    @FXML private TextField splitBillField;
+    @FXML private Text finalBillTotalField;
+    @FXML private Text finalTipTotalField;
+    @FXML private Text billPerPersonField;
+    @FXML private Button enterButton;
 
     @FXML
-    private TextField totalBillField;
+    public void initialize() {
+        ApplySettings.applyDarkMode(rootPane);
+    }
 
-    @FXML
-    private TextField totalTipField;
-
-    @FXML
-    private TextField splitBillField;
-
-    @FXML
-    private TextField finalBillTotalField;
-
-    @FXML
-    private TextField finalTipTotalField;
-
-    @FXML
-    private TextField billPerPersonField;
-
-    @FXML
-    private Button enterButton;
     @FXML
     private void handleEnterButtonClick(ActionEvent event) {
         try {

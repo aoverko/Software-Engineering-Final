@@ -9,17 +9,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.daily_verse.DailyVerseController">
-   <VBox prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.daily_verse.DailyVerseController">
+   <VBox fx:id="imgVBox" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
-      <ImageView id="verseImg" fx:id="verseImg" fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true" smooth="false" VBox.vgrow="ALWAYS">
+      <ImageView id="verseImg" fx:id="verseImg" fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true" VBox.vgrow="ALWAYS">
             <viewport>
                <Rectangle2D />
             </viewport>
          </ImageView>
       </children>
    </VBox>
-<Label id="verseLabel" fx:id="verseLabel" alignment="CENTER" layoutX="274.0" layoutY="149.0" prefHeight="282.0" prefWidth="487.0" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="185.0" AnchorPane.topAnchor="150.0">
+<Label id="verseLabel" fx:id="verseLabel" alignment="CENTER" layoutX="272.0" layoutY="149.0" prefHeight="300.0" prefWidth="484.0" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="244.0" AnchorPane.topAnchor="150.0">
    <font>
       <Font name="Arial Bold" size="25.0" />
    </font>

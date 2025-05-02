@@ -9,37 +9,59 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.landing_page.LandingPageController">
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.landing_page.LandingPageController">
 
     <!-- Background Image -->
-    <ImageView fitHeight="600" fitWidth="1024">
+    <ImageView fitHeight="600" fitWidth="1024" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <image>
             <Image url="@train_bg.png" />
         </image>
     </ImageView>
 
     <!-- White Card Centered -->
-    <VBox alignment="CENTER" layoutX="277.0" layoutY="108.0" prefHeight="360.0" prefWidth="465.0" styleClass="white-card" AnchorPane.bottomAnchor="132.0" AnchorPane.leftAnchor="278.0" AnchorPane.rightAnchor="278.0" AnchorPane.topAnchor="108.0">
-        <Label contentDisplay="CENTER" prefHeight="36.0" prefWidth="364.0" style="-fx-alignment: center;" text="Highlander Industries" textAlignment="CENTER" wrapText="true">
-         <font>
-            <Font name="Arial Bold" size="30.0" />
-         </font>
-      </Label>
-        <TextField fx:id="nicknameField" onAction="#handleWelcome" prefHeight="25.0" prefWidth="397.0" promptText="Enter nickname">
+    <VBox alignment="CENTER" layoutX="288.0" layoutY="60.0" prefHeight="470.0" prefWidth="415.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="60.0">
+      <ImageView fitHeight="166.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../logo.PNG" />
+         </image>
          <VBox.margin>
-            <Insets bottom="20.0" left="50.0" right="50.0" />
+            <Insets />
          </VBox.margin>
-         <padding>
-            <Insets bottom="10.0" top="10.0" />
-         </padding></TextField>
-        <Button onAction="#handleWelcome" prefHeight="36.0" prefWidth="120.0" styleClass="red-button" text="Welcome">
-         <font>
-            <Font size="15.0" />
-         </font>
+      </ImageView>
+      <TextFlow prefHeight="110.0" prefWidth="264.0" textAlignment="CENTER">
+         <children>
+              <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="107.0" prefWidth="288.0" style="-fx-alignment: center;" text="Highlander Industries" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </TextFlow>
+      <VBox alignment="CENTER" prefHeight="113.0" prefWidth="318.0">
+         <children>
+              <TextField fx:id="nicknameField" focusTraversable="false" onAction="#handleWelcome" prefHeight="37.0" prefWidth="259.0" promptText="Enter nickname" style="-fx-background-radius: 10;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="50.0" right="50.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextField>
+              <Button focusTraversable="false" onAction="#handleWelcome" prefHeight="41.0" prefWidth="297.0" style="-fx-background-radius: 10; -fx-background-color: #c42121;" text="Welcome" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
          <VBox.margin>
-            <Insets top="20.0" />
-         </VBox.margin></Button>
+            <Insets />
+         </VBox.margin>
+      </VBox>
     </VBox>
 
 </AnchorPane>
