@@ -5,6 +5,7 @@ public class WordGame {
     String correctWord;
     boolean isVisible;
     int NumOfBody;
+    int numOfWrong;
 
     public WordGame() {
         this.guessedLetter = "";
@@ -14,12 +15,6 @@ public class WordGame {
 
 
     }
-    public void wrongGuess(){
-        this.NumOfBody += 1;
-    }
 
-    public void setCorrectWord(String correctWord) {
-        this.correctWord = correctWord;
-    }
 
 }
