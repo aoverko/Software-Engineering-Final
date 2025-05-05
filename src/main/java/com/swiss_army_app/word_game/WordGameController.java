@@ -55,6 +55,7 @@ public class WordGameController {
     @FXML
     private void word1(ActionEvent event){
         wordGame.correctWord = "cat";
+        wordGame.numOfCorrect=0;
         System.out.println(wordGame.correctWord);
         letter1.setVisible(true);
         letter2.setVisible(true);
@@ -63,11 +64,19 @@ public class WordGameController {
         letter5.setVisible(false);
         letter6.setVisible(false);
         letter7.setVisible(false);
+        letter1.clear();
+        letter2.clear();
+        letter3.clear();
+        letter4.clear();
+        letter5.clear();
+        letter6.clear();
+        letter7.clear();
 
     }
     @FXML
     private void word2(ActionEvent event){
         wordGame.correctWord = "treat";
+        wordGame.numOfCorrect=0;
         System.out.println(wordGame.correctWord);
         letter1.setVisible(true);
         letter2.setVisible(true);
@@ -76,11 +85,19 @@ public class WordGameController {
         letter5.setVisible(true);
         letter6.setVisible(false);
         letter7.setVisible(false);
+        letter1.clear();
+        letter2.clear();
+        letter3.clear();
+        letter4.clear();
+        letter5.clear();
+        letter6.clear();
+        letter7.clear();
 
     }
     @FXML
     private void word3(ActionEvent event){
         wordGame.correctWord = "whisker";
+        wordGame.numOfCorrect=0;
         System.out.println(wordGame.correctWord);
         letter1.setVisible(true);
         letter2.setVisible(true);
@@ -89,6 +106,13 @@ public class WordGameController {
         letter5.setVisible(true);
         letter6.setVisible(true);
         letter7.setVisible(true);
+        letter1.clear();
+        letter2.clear();
+        letter3.clear();
+        letter4.clear();
+        letter5.clear();
+        letter6.clear();
+        letter7.clear();
 
     }
 
@@ -103,35 +127,49 @@ public class WordGameController {
                 System.out.println("Match!");
                 if(i+1==1){
                     letter1.setText(letter1.getText() + letter);
+                     wordGame.numOfCorrect+=1;
                 } else if (i+1==2) {
                     letter2.setText(letter2.getText() + letter);
+                    wordGame.numOfCorrect+=1;
                 } else if (i+1==3) {
                     letter3.setText(letter3.getText() + letter);
+                    wordGame.numOfCorrect+=1;
                 } else if (i+1==4) {
                     letter4.setText(letter4.getText() + letter);
+                    wordGame.numOfCorrect+=1;
                 } else if (i+1==5) {
                     letter5.setText(letter5.getText() + letter);
+                    wordGame.numOfCorrect+=1;
                 } else if (i+1==6) {
                     letter6.setText(letter6.getText() + letter);
+                    wordGame.numOfCorrect+=1;
                 } else if (i+1==7) {
                     letter7.setText(letter7.getText() + letter);
+                    wordGame.numOfCorrect+=1;
                 }
                 System.out.println("Letter at index " + i + ": " + letter);
+
             } else{
                wordGame.numOfWrong +=1;
             }
             if (wordGame.numOfWrong == wordGame.correctWord.length()) {
                 wrongLetters.setText(wrongLetters.getText() + letter);
+                wordGame.loseCount +=1;
             }
-
 
         }
 
         System.out.println("User typed: " + letter);
+        System.out.println("Letters right"+wordGame.numOfCorrect);
+        System.out.println("Letters wrong"+wordGame.loseCount);
 
-
-
+    if (wordGame.loseCount == 5){
+        wordGame.gameOver = true;
+        System.out.println("Game Over:"+wordGame.gameOver);
+        
 
     }
+    }
+
 
 }
