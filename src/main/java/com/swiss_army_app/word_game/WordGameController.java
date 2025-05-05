@@ -4,18 +4,20 @@ import com.swiss_army_app.settings.ApplySettings;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-
-
+import javafx.scene.layout.Pane;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Line;
+import javafx.scene.shape.Polygon;
+import org.kordamp.bootstrapfx.scene.layout.Panel;
 
 
 public class WordGameController {
     //from word game class
-    private WordGame wordGame = new WordGame();
+    private final WordGame wordGame = new WordGame();
     //scene fxids
     @FXML
     private AnchorPane rootPane;
@@ -45,12 +47,51 @@ public class WordGameController {
     private RadioButton level2;
     @FXML
     private RadioButton level3;
+    @FXML
+    private Pane gameOverScreen;
+    @FXML
+    private Pane winScreen;
+    @FXML
+    private Button reset;
+    @FXML
+    private Ellipse cat1;
+    @FXML
+    private Ellipse cat2;
+    @FXML
+    private Circle cat3;
+    @FXML
+    private Circle cat32;
+    @FXML
+    private Polygon cat4;
+    @FXML
+    private Polygon cat5;
+    @FXML
+    private Polygon catNose;
+    @FXML
+    private Ellipse catEye1;
+    @FXML
+    private Ellipse catEye2;
+    @FXML
+    private Line catTail;
+
 
 
     @FXML
     public void initialize() {
         ApplySettings.applyDarkMode(rootPane);
         Platform.runLater(() -> ApplySettings.addClicks(rootPane));
+        gameOverScreen.setVisible(false);
+        winScreen.setVisible(false);
+        cat1.setVisible(false);
+        cat2.setVisible(false);
+        cat3.setVisible(false);
+        cat32.setVisible(false);
+        cat4.setVisible(false);
+        cat5.setVisible(false);
+        catTail.setVisible(false);
+        catEye1.setVisible(false);
+        catEye2.setVisible(false);
+        catNose.setVisible(false);
     }
     @FXML
     private void word1(ActionEvent event){
@@ -162,14 +203,48 @@ public class WordGameController {
         System.out.println("User typed: " + letter);
         System.out.println("Letters right"+wordGame.numOfCorrect);
         System.out.println("Letters wrong"+wordGame.loseCount);
+        System.out.println(wordGame.correctWord.length());
 
+        if(wordGame.numOfCorrect==wordGame.correctWord.length()){
+            winScreen.setVisible(true);
+        }
+        switch (wordGame.loseCount) {
+            case 1:
+                // Code to be executed if expression == value1
+                cat1.setVisible(true);
+                System.out.print("your got 1 wrong");
+                break;
+            case 2:
+                // Code to be executed if expression == value2
+                cat2.setVisible(true);
+                System.out.print("your got 2 wrong");
+                break;
+            case 3:
+                cat3.setVisible(true);
+                cat32.setVisible(true);
+                System.out.print("your got 3 wrong");
+                break;
+            case 4:
+                cat4.setVisible(true);
+                System.out.print("your got 4 wrong");
+                break;
+            case 5:
+                cat5.setVisible(true);
+                System.out.print("your got 5 wrong");
+                break;
+
+        }
     if (wordGame.loseCount == 5){
         wordGame.gameOver = true;
         System.out.println("Game Over:"+wordGame.gameOver);
-        
+        gameOverScreen.setVisible(true);
 
     }
-    }
 
+    }
+    @FXML
+    private void resetGame(ActionEvent event) {
+        initialize();
+    }
 
 }
