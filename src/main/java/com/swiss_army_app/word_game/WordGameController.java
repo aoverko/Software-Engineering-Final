@@ -108,6 +108,9 @@ public class WordGameController {
         letter6.clear();
         letter7.clear();
         wrongLetters.clear();
+        wordGame.numOfCorrect = 0;
+        wordGame.numOfWrong =0;
+        wordGame.loseCount =0;
     }
     @FXML
     private void word1(ActionEvent event){
@@ -129,6 +132,7 @@ public class WordGameController {
         letter6.clear();
         letter7.clear();
         wrongLetters.clear();
+
 
     }
     @FXML
