@@ -29,14 +29,20 @@
             <Font size="31.0" />
          </font>
       </Text>
-      <TextField fx:id="inputLetter" layoutX="371.0" layoutY="287.0" prefHeight="26.0" prefWidth="179.0" />
-      <Button fx:id="inputButton" layoutX="422.0" layoutY="330.0" mnemonicParsing="false" onAction="#checkLetter" text="guess letter" />
+      <TextField fx:id="inputLetter" layoutX="451.0" layoutY="287.0" prefHeight="50.0" prefWidth="62.0">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Button fx:id="inputButton" layoutX="439.0" layoutY="354.0" mnemonicParsing="false" onAction="#checkLetter" text="guess letter" />
       <HBox prefHeight="600.0" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
              <fx:include source="../sidebar/sidebar.fxml" />
          </children>
       </HBox>
-      <TextArea fx:id="wrongLetters" layoutX="592.0" layoutY="394.0" prefHeight="192.0" prefWidth="265.0" />
+      <TextArea fx:id="wrongLetters" layoutX="592.0" layoutY="394.0" prefHeight="192.0" prefWidth="265.0">
+         <font>
+            <Font size="42.0" />
+         </font></TextArea>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <TextField fx:id="letter1" editable="false" layoutX="230.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0">
          <font>
@@ -72,13 +78,13 @@
             <Font size="29.0" />
          </font>
       </Text>
-      <RadioButton fx:id="level1" layoutX="725.0" layoutY="37.0" mnemonicParsing="false" onAction="#word1" text="Level 1">
+      <RadioButton fx:id="level1" layoutX="725.0" layoutY="37.0" mnemonicParsing="false" onAction="#word1" text="Level 1" textFill="#a90202">
          <toggleGroup>
             <ToggleGroup fx:id="level" />
          </toggleGroup></RadioButton>
-      <RadioButton fx:id="level2" layoutX="726.0" layoutY="66.0" mnemonicParsing="false" onAction="#word2" text="Level 2" toggleGroup="$level" />
-      <RadioButton fx:id="level3" layoutX="727.0" layoutY="94.0" mnemonicParsing="false" onAction="#word3" text="Level 3" toggleGroup="$level" />
-      <Pane fx:id="gameOverScreen" layoutX="144.0" layoutY="26.0" prefHeight="360.0" prefWidth="657.0">
+      <RadioButton fx:id="level2" layoutX="726.0" layoutY="66.0" mnemonicParsing="false" onAction="#word2" text="Level 2" textFill="#a90202" toggleGroup="$level" />
+      <RadioButton fx:id="level3" layoutX="727.0" layoutY="94.0" mnemonicParsing="false" onAction="#word3" text="Level 3" textFill="#a90202" toggleGroup="$level" />
+      <Pane fx:id="gameOverScreen" layoutX="144.0" layoutY="26.0" prefHeight="360.0" prefWidth="657.0" visible="false">
          <children>
             <Text layoutX="67.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0">
                <font>
