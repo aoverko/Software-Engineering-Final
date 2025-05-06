@@ -4,6 +4,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -18,7 +19,7 @@
 
 <AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.swiss_army_app.word_game.WordGameController">
    <children>
-      <Text fill="WHITE" layoutX="200.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CAT IN A BOX" wrappingWidth="481.8404235839844">
+      <Text fill="#d41010" layoutX="200.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CAT IN A BOX" wrappingWidth="481.8404235839844">
          <font>
             <Font size="72.0" />
          </font>
@@ -37,31 +38,55 @@
       </HBox>
       <TextArea fx:id="wrongLetters" layoutX="592.0" layoutY="394.0" prefHeight="192.0" prefWidth="265.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <TextField fx:id="letter1" layoutX="230.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0" />
-      <TextField fx:id="letter2" layoutX="305.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0" />
-      <TextField fx:id="letter3" layoutX="379.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0" />
-      <TextField fx:id="letter4" layoutX="450.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0" />
-      <TextField fx:id="letter5" layoutX="519.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0" />
-      <TextField fx:id="letter6" layoutX="592.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0" />
-      <TextField fx:id="letter7" layoutX="662.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0" />
+      <TextField fx:id="letter1" editable="false" layoutX="230.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="letter2" editable="false" layoutX="305.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="letter3" editable="false" layoutX="379.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="letter4" editable="false" layoutX="450.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="letter5" editable="false" layoutX="519.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="letter6" editable="false" layoutX="592.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="letter7" editable="false" layoutX="662.0" layoutY="178.0" prefHeight="86.0" prefWidth="62.0">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="601.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong Letters" wrappingWidth="219.40003967285156">
+      <Text fill="#fa0505" layoutX="601.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong Letters" wrappingWidth="219.40003967285156">
          <font>
             <Font size="29.0" />
          </font>
       </Text>
-      <RadioButton fx:id="level1" layoutX="725.0" layoutY="37.0" mnemonicParsing="false" onAction="#word1" text="Level 1" />
-      <RadioButton fx:id="level2" layoutX="726.0" layoutY="66.0" mnemonicParsing="false" onAction="#word2" text="Level 2" />
-      <RadioButton fx:id="level3" layoutX="727.0" layoutY="94.0" mnemonicParsing="false" onAction="#word3" text="Level 3" />
-      <Pane fx:id="gameOverScreen" layoutX="221.0" layoutY="26.0" prefHeight="368.0" prefWidth="610.0" visible="false">
+      <RadioButton fx:id="level1" layoutX="725.0" layoutY="37.0" mnemonicParsing="false" onAction="#word1" text="Level 1">
+         <toggleGroup>
+            <ToggleGroup fx:id="level" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="level2" layoutX="726.0" layoutY="66.0" mnemonicParsing="false" onAction="#word2" text="Level 2" toggleGroup="$level" />
+      <RadioButton fx:id="level3" layoutX="727.0" layoutY="94.0" mnemonicParsing="false" onAction="#word3" text="Level 3" toggleGroup="$level" />
+      <Pane fx:id="gameOverScreen" layoutX="144.0" layoutY="26.0" prefHeight="360.0" prefWidth="657.0">
          <children>
             <Text layoutX="67.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0">
                <font>
                   <Font size="96.0" />
                </font>
             </Text>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bf2d17" height="368.0" stroke="BLACK" strokeType="INSIDE" width="610.0" />
-            <Text fill="#ffb33a" layoutX="58.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Over">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bf2d17" height="368.0" stroke="BLACK" strokeType="INSIDE" width="658.0" />
+            <Text fill="#ffb33a" layoutX="58.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Over :(">
                <font>
                   <Font size="96.0" />
                </font>
@@ -69,28 +94,15 @@
             <Button fx:id="reset" layoutX="279.0" layoutY="264.0" mnemonicParsing="false" onAction="#resetGame" text="Replay Game" textAlignment="CENTER" textFill="#bd2d17" />
          </children>
       </Pane>
-      <Circle fx:id="cat32" fill="DODGERBLUE" layoutX="171.0" layoutY="416.0" radius="73.0" stroke="BLACK" strokeType="INSIDE" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcba56" height="172.0" layoutX="84.0" layoutY="399.0" stroke="#915506" strokeType="INSIDE" width="205.0" />
-      <Polygon fx:id="cat4" fill="DODGERBLUE" layoutX="98.0" layoutY="299.0" points="7.8000030517578125, 6.63018798828125, 35.80000305175781, -27.769805908203125, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
-      <Polygon fx:id="cat5" fill="DODGERBLUE" layoutX="161.0" layoutY="290.0" points="31.400009155273438, 10.230194091796875, 5.9999847412109375, -19.36981201171875, 49.0, -46.56977844238281" stroke="BLACK" strokeType="INSIDE" />
-      <SVGPath fillRule="EVEN_ODD" layoutX="177.0" layoutY="164.0" strokeLineCap="BUTT" />
-      <Line fx:id="catTail" endX="13.4000244140625" endY="162.8302001953125" fill="#1c4aff" layoutX="272.0" layoutY="161.0" startX="-49.59999084472656" startY="286.63018798828125" stroke="#703cff" strokeWidth="8.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcba56" height="172.0" layoutX="84.0" layoutY="399.0" stroke="#915506" strokeType="INSIDE" width="205.0" />
-      <Ellipse fx:id="cat2" fill="DODGERBLUE" layoutX="187.0" layoutY="399.0" radiusX="19.0" radiusY="29.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fx:id="cat1" fill="DODGERBLUE" layoutX="116.0" layoutY="399.0" radiusX="19.0" radiusY="29.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="cat3" fill="DODGERBLUE" layoutX="148.0" layoutY="313.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fx:id="catEye1" fill="DODGERBLUE" layoutX="124.0" layoutY="313.0" radiusX="8.0" radiusY="13.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fx:id="catEye2" fill="DODGERBLUE" layoutX="167.0" layoutY="313.0" radiusX="8.0" radiusY="13.0" stroke="BLACK" strokeType="INSIDE" />
-      <Polygon fx:id="catNose" fill="DODGERBLUE" layoutX="142.0" layoutY="281.0" points="-10.000015258789062, 47.8302001953125, 9.199996948242188, 47.8302001953125, 1.1999969482421875, 62.63018798828125" stroke="BLACK" strokeType="INSIDE" />
-      <Pane fx:id="winScreen" layoutX="231.0" layoutY="36.0" prefHeight="368.0" prefWidth="610.0" visible="false">
+      <Pane fx:id="winScreen" layoutX="183.0" layoutY="36.0" prefHeight="345.0" prefWidth="658.0" visible="false">
          <children>
             <Text layoutX="67.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0">
                <font>
                   <Font size="96.0" />
                </font>
             </Text>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#23e723" height="368.0" stroke="BLACK" strokeType="INSIDE" width="610.0" />
-            <Text fill="#200b5b" layoutX="58.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You WIN">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#23e723" height="346.0" stroke="BLACK" strokeType="INSIDE" width="658.0" />
+            <Text fill="#200b5b" layoutX="120.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOU WIN!">
                <font>
                   <Font size="96.0" />
                </font>
@@ -98,6 +110,29 @@
             <Button fx:id="reset1" layoutX="279.0" layoutY="264.0" mnemonicParsing="false" onAction="#resetGame" text="Replay Game" textAlignment="CENTER" textFill="#bd2d17" />
          </children>
       </Pane>
+      <Circle fx:id="cat32" fill="#b5babf" layoutX="171.0" layoutY="416.0" radius="73.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcba56" height="172.0" layoutX="84.0" layoutY="399.0" stroke="#915506" strokeType="INSIDE" width="205.0" />
+      <Polygon fx:id="cat4" fill="#5b5f63" layoutX="98.0" layoutY="299.0" points="7.8000030517578125, 6.63018798828125, 35.80000305175781, -27.769805908203125, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
+      <Polygon fx:id="cat5" fill="#5b5f63" layoutX="161.0" layoutY="290.0" points="31.400009155273438, 10.230194091796875, 5.9999847412109375, -19.36981201171875, 49.0, -46.56977844238281" stroke="BLACK" strokeType="INSIDE" />
+      <SVGPath fillRule="EVEN_ODD" layoutX="177.0" layoutY="164.0" strokeLineCap="BUTT" />
+      <Line fx:id="catTail" endX="13.4000244140625" endY="162.8302001953125" fill="#e7b82a" layoutX="272.0" layoutY="161.0" startX="-49.59999084472656" startY="286.63018798828125" stroke="#676371" strokeWidth="8.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcba56" height="172.0" layoutX="84.0" layoutY="399.0" stroke="#915506" strokeType="INSIDE" width="205.0" />
+      <Ellipse fx:id="cat2" fill="#afabb9" layoutX="187.0" layoutY="399.0" radiusX="19.0" radiusY="29.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fx:id="cat1" fill="#afabb9" layoutX="116.0" layoutY="399.0" radiusX="19.0" radiusY="29.0" stroke="#080101" strokeType="INSIDE" />
+      <Circle fx:id="cat3" fill="#dadfe4" layoutX="148.0" layoutY="313.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fx:id="catEye1" fill="#2a333b" layoutX="124.0" layoutY="313.0" radiusX="8.0" radiusY="13.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fx:id="catEye2" fill="#2a333b" layoutX="167.0" layoutY="313.0" radiusX="8.0" radiusY="13.0" stroke="BLACK" strokeType="INSIDE" />
+      <Polygon fx:id="catNose" fill="#eac0e1" layoutX="142.0" layoutY="281.0" points="-10.000015258789062, 47.8302001953125, 9.199996948242188, 47.8302001953125, 1.1999969482421875, 62.63018798828125" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="Xeye2" layoutX="160.0" layoutY="324.0" stroke="#282626" strokeType="OUTSIDE" text="X">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text fx:id="Xeye1" layoutX="116.0" layoutY="324.0" stroke="#050303" strokeType="OUTSIDE" text="X">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
 
    </children>
 </AnchorPane>

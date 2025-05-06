@@ -12,6 +12,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
+import javafx.scene.text.Text;
 import org.kordamp.bootstrapfx.scene.layout.Panel;
 
 
@@ -73,6 +74,11 @@ public class WordGameController {
     private Ellipse catEye2;
     @FXML
     private Line catTail;
+    @FXML
+    private Text Xeye1;
+    @FXML
+    private Text Xeye2;
+
 
 
 
@@ -92,6 +98,16 @@ public class WordGameController {
         catEye1.setVisible(false);
         catEye2.setVisible(false);
         catNose.setVisible(false);
+        Xeye1.setVisible(false);
+        Xeye2.setVisible(false);
+        letter1.clear();
+        letter2.clear();
+        letter3.clear();
+        letter4.clear();
+        letter5.clear();
+        letter6.clear();
+        letter7.clear();
+        wrongLetters.clear();
     }
     @FXML
     private void word1(ActionEvent event){
@@ -112,6 +128,7 @@ public class WordGameController {
         letter5.clear();
         letter6.clear();
         letter7.clear();
+        wrongLetters.clear();
 
     }
     @FXML
@@ -133,7 +150,7 @@ public class WordGameController {
         letter5.clear();
         letter6.clear();
         letter7.clear();
-
+        wrongLetters.clear();
     }
     @FXML
     private void word3(ActionEvent event){
@@ -154,6 +171,9 @@ public class WordGameController {
         letter5.clear();
         letter6.clear();
         letter7.clear();
+        wrongLetters.clear();
+        wordGame.loseCount =0;
+        wordGame.numOfCorrect=0;
 
     }
 
@@ -207,6 +227,16 @@ public class WordGameController {
 
         if(wordGame.numOfCorrect==wordGame.correctWord.length()){
             winScreen.setVisible(true);
+            cat1.setVisible(true);
+            cat2.setVisible(true);
+            cat3.setVisible(true);
+            cat32.setVisible(true);
+            cat4.setVisible(true);
+            cat5.setVisible(true);
+            catNose.setVisible(true);
+            catTail.setVisible(true);
+            catEye1.setVisible(true);
+            catEye2.setVisible(true);
         }
         switch (wordGame.loseCount) {
             case 1:
@@ -231,15 +261,14 @@ public class WordGameController {
             case 5:
                 cat5.setVisible(true);
                 System.out.print("your got 5 wrong");
+                catNose.setVisible(true);
+                Xeye1.setVisible(true);
+                Xeye2.setVisible(true);
+                gameOverScreen.setVisible(true);
                 break;
 
         }
-    if (wordGame.loseCount == 5){
-        wordGame.gameOver = true;
-        System.out.println("Game Over:"+wordGame.gameOver);
-        gameOverScreen.setVisible(true);
 
-    }
 
     }
     @FXML
